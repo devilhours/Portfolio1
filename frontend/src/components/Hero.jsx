@@ -1,5 +1,6 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
+import photo from "../assets/ashu.png";
 
 const Hero = () => {
   return (
@@ -29,9 +30,15 @@ const Hero = () => {
             />
           </div>
           <p className="text-slate-400 max-w-lg mx-auto md:mx-0">
-            I'm a passionate developer and a final year Computer Science
-            student. This portfolio is a showcase of my journey and skills in
-            the world of technology.
+            With a Bachelor's degree in Computer Science and Engineering and
+            direct experience as a Software Engineering Intern at Ericsson, I
+            have deployed full-stack applications using JavaScript, React.js,
+            Node.js, and MongoDB and Some Projects in GenAI using Python. My
+            strong foundation in data structures and algorithms, demonstrated by
+            solving over 500 problems on Leetcode, equips me to write efficient,
+            scalable, and robust code. This combination of practical project
+            experience and core theoretical knowledge makes me a capable and
+            effective software engineer.
           </p>
           <button
             onClick={() =>
@@ -49,7 +56,7 @@ const Hero = () => {
           <div className="relative w-72 h-72 md:w-96 md:h-96">
             <div className="absolute inset-0 bg-emerald-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
             <img
-              src="/UserImage.JPG"
+              src={photo}
               alt="Ashutosh Kumar"
               className="relative w-full h-full rounded-full object-cover border-4 border-slate-700 shadow-2xl"
             />

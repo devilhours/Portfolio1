@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, LayoutDashboard } from "lucide-react";
+import { Menu, X, LayoutDashboard, Laptop } from "lucide-react";
 import useAuthStore from "../store/useAuthStore"; // Import the auth store
 
 const Navbar = () => {
@@ -23,8 +23,7 @@ const Navbar = () => {
     <header className="bg-slate-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-slate-700">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 cursor-pointer">
-          <img
-            src="/NavLogo.jpg"
+          <Laptop
             alt="Logo"
             className="h-10 w-10 rounded-full object-cover"
           />
