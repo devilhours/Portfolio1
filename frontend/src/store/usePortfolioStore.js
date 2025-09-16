@@ -5,8 +5,10 @@ import toast from "react-hot-toast";
 const usePortfolioStore = create((set) => ({
   // --- STATE ---
   projects: [],
+  contactMessages: [], // New state for messages
   isLoadingProjects: false,
   isSendingMessage: false,
+  isLoadingMessages: false, // New loading state
 
   // --- ACTIONS ---
   fetchProjects: async () => {
@@ -46,6 +48,19 @@ const usePortfolioStore = create((set) => ({
     } catch (error) {
       toast.error(error.response?.data?.error || "Failed to add project.");
       return false;
+    }
+  },
+
+  fetchContactMessages: async () => {
+    set({ isLoadingMessages: true });
+    try {
+        const res = await axiosInstance.get('/contact');
+        set({ contactMessages: res.data });
+    } catch (error) {
+        toast.error('Failed to load messages.');
+        console.error("Fetch Messages Error:", error);
+    } finally {
+        set({ isLoadingMessages: false });
     }
   },
 }));
