@@ -14,7 +14,7 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // Your frontend URL
+    origin: 'https://portfolio-781j.onrender.com', // Your frontend URL
     credentials: true,
 };
 
